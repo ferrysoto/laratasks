@@ -7,6 +7,20 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
 </p>
 
+## How to install Project
+
+# Create DATABASE
+
+- Execute "database_laratasks_example.sql" file on your mysql console or copy the content and execute on your DB manager.
+- If you have a DB, modify the .env file from the root, and change de database configuration.
+
+
+# Execute apache and start PHP ARTISAN SERVE
+- Apache starts the "public" directory (/www/public)
+- Run "php artisan serve" on the project root directory
+
+# Run!
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
