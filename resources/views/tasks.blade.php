@@ -38,7 +38,7 @@
                     <div class="panel-body">
                         <table class="table table-striped task-table">
                             <thead>
-                                <th>Tarea</th>
+                                <th>Título de las tareas</th>
                                 <th>&nbsp;</th>
                             </thead>
                             <tbody>
@@ -78,7 +78,7 @@
                     <div class="panel-body">
                         <table class="table table-striped task-table">
                             <thead>
-                                <th>Task</th>
+                                <th>Título de las tareas</th>
                                 <th>&nbsp;</th>
                             </thead>
                             <tbody>
