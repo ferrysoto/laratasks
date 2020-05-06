@@ -15,18 +15,12 @@ use App\Task;
 use Illuminate\Http\Request;
 
 Route::group(['middleware' => ['web']], function () {
-    /**
-     * Show Task Dashboard
-     */
     Route::get('/', function () {
         return view('tasks', [
             'tasks' => Task::orderBy('created_at', 'asc')->get()
         ]);
     });
 
-    /**
-     * Add New Task
-     */
     Route::post('/task', function (Request $request) {
         $validator = Validator::make($request->all(), [
             'name' => 'required|max:255',
@@ -45,7 +39,6 @@ Route::group(['middleware' => ['web']], function () {
         return redirect('/');
     });
 
-    // Update task state
     Route::get('/task/update/{id}', function (Request $request) {
 
         $state = DB::table('tasks')->select('is_completed')->where('id', $request->id)->get();
@@ -62,9 +55,7 @@ Route::group(['middleware' => ['web']], function () {
 
         return redirect('/');
     });
-    /**
-     * Delete Task
-     */
+
     Route::delete('/task/{id}', function ($id) {
         Task::findOrFail($id)->delete();
 
